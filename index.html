@@ -1,239 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dala De Carvalho - Pesquisa Científica</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  /* Reset e base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0; font-family: 'Inter', sans-serif;
-    background: #f5f5f5; color: #222;
-    line-height: 1.6;
-  }
-  a {
-    color: #e6b422; /* amarelo bandeira */
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dala Research | Dala De Carvalho</title>
+  <style>
+    :root {
+      --cor-primaria: #d72638;
+      --cor-secundaria: #1b1b1b;
+      --cor-clara: #f9f9f9;
+      --cor-texto: #222;
+    }
 
-  /* Navbar fixa */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: #000; /* preto bandeira */
-    color: #e6b422;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-    z-index: 999;
-    font-weight: 700;
-  }
-  nav a {
-    color: #e6b422;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-  nav a:hover {
-    color: #fff;
-  }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--cor-clara);
+      color: var(--cor-texto);
+    }
 
-  /* Container geral */
-  .container {
-    max-width: 900px;
-    margin: 100px auto 40px; /* topo para navbar */
-    padding: 0 1rem;
-  }
-
-  /* Seções */
-  section {
-    margin-bottom: 4rem;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-  }
-
-  /* Títulos */
-  h1, h2 {
-    color: #b22222; /* vermelho bandeira */
-    margin-bottom: 1rem;
-  }
-
-  /* Biografia */
-  .bio {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .bio img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #b22222;
-  }
-  .bio p {
-    flex: 1;
-  }
-
-  /* Projetos / artigos */
-  .project, .article {
-    margin-bottom: 1.5rem;
-  }
-  .project-title, .article-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #b22222;
-  }
-  .project-desc, .article-desc {
-    margin: 0.3rem 0 0 0;
-  }
-
-  /* Formulário contato */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  label {
-    font-weight: 600;
-  }
-  input, textarea {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 1rem;
-  }
-  button {
-    background-color: #b22222;
-    color: white;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background-color: #7a1414;
-  }
-
-  /* Botão voltar ao topo */
-  #topBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 100;
-    background-color: #b22222;
-    color: white;
-    border: none;
-    padding: 0.7rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 700;
-  }
-
-  /* Responsividade */
-  @media (max-width: 600px) {
-    .bio {
-      flex-direction: column;
+    header {
+      background-color: var(--cor-secundaria);
+      color: white;
       text-align: center;
+      padding: 2rem 1rem;
     }
-    .bio img {
-      margin: 0 auto;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-  }
-</style>
+
+    header p {
+      margin: 0.5rem 0;
+      font-style: italic;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--cor-primaria);
+      margin-bottom: 1rem;
+    }
+
+    article {
+      background-color: white;
+      border-left: 5px solid var(--cor-primaria);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    article h3 {
+      margin-top: 0;
+    }
+
+    a {
+      color: var(--cor-primaria);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    form {
+      background: white;
+      padding: 1rem;
+      border-left: 5px solid var(--cor-primaria);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      margin-top: 1rem;
+      background: var(--cor-primaria);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #b81e2f;
+    }
+
+    footer {
+      background-color: var(--cor-secundaria);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer li {
+      margin: 0 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav li {
+        margin: 0.3rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <a href="#biografia">Biografia</a>
-  <a href="#pesquisa">Pesquisa</a>
-  <a href="#publicacoes">Publicações</a>
-  <a href="#contato">Contato</a>
-</nav>
-
-<div class="container">
+  <header>
+    <h1>Dala De Carvalho</h1>
+    <p>Pesquisador Independente em Música Tradicional Angolana</p>
+    <nav>
+      <ul>
+        <li><a href="#biografia">Biografia</a></li>
+        <li><a href="#pesquisa">Pesquisa</a></li>
+        <li><a href="#publicacoes">Publicações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section id="biografia">
-    <h1>Dala De Carvalho</h1>
-    <div class="bio">
-      <img src="https://via.placeholder.com/140" alt="Foto de Dala De Carvalho" />
-      <p>Pesquisador independente especializado em música tradicional angolana, com atuação em educação musical e pesquisa aplicada. Diretor pedagógico do Instituto Politécnico de Artes.</p>
-    </div>
+    <h2>Biografia</h2>
+    <img src="sua-foto.jpg" alt="Foto de Dala De Carvalho" width="200">
+    <p>Dala De Carvalho é cantor, compositor, educador e pesquisador musical especializado em música tradicional angolana. Atua de forma independente desenvolvendo projetos com impacto sociocultural e científico, focando na preservação, inovação e internacionalização das sonoridades africanas, com destaque para o folclore e a linguagem rítmica de Angola.</p>
   </section>
 
   <section id="pesquisa">
-    <h2>Pesquisa</h2>
-    <div class="project">
-      <div class="project-title">Engenharia Terapêutica Multicomponente para HIV</div>
-      <div class="project-desc">Proposta inovadora combinando bNAbs, ART e CRISPR/Cas9 para um tratamento potencialmente curativo.</div>
-    </div>
-    <div class="project">
-      <div class="project-title">Vacinas mRNA e Ativadores de Replicação Viral</div>
-      <div class="project-desc">Abordagem experimental visando a ativação controlada do vírus para eliminação do reservatório latente.</div>
-    </div>
-    <!-- Adicione mais projetos conforme desejar -->
+    <h2>Projetos de Pesquisa</h2>
+    <article>
+      <h3>Engenharia Terapêutica Multicomponente aplicada ao HIV</h3>
+      <p>Proposta científica que explora modelos biointeligentes combinando terapia multidimensional, formulação local e princípios de neuroengenharia. O projeto visa contribuir para uma potencial cura funcional do HIV.</p>
+      <a href="documentos/proposta_terapeutica.pdf" target="_blank">Ver PDF</a>
+    </article>
+    <article>
+      <h3>Classificação de Estilos Musicais Angolanos com IA</h3>
+      <p>Uso de inteligência artificial para classificar estilos como Semba, Kilapanga e Afro Soul com base em BPM e intensidade percussiva. Projeto visa aplicar tecnologia à salvaguarda do patrimônio sonoro angolano.</p>
+      <a href="documentos/classificacao_musical_ia.pdf" target="_blank">Ver PDF</a>
+    </article>
   </section>
 
   <section id="publicacoes">
     <h2>Publicações</h2>
-    <div class="article">
-      <div class="article-title">Proposta Científica para Cura do HIV - Documento 1</div>
-      <div class="article-desc"><a href="#" target="_blank">Download PDF</a></div>
-    </div>
-    <div class="article">
-      <div class="article-title">Proposta Científica para Cura do HIV - Documento 2</div>
-      <div class="article-desc"><a href="#" target="_blank">Download PDF</a></div>
-    </div>
-    <!-- Substitua os links para os seus arquivos -->
+    <ul>
+      <li><a href="documentos/ebook_dancas_folcloricas.pdf" target="_blank">Ebook: Danças Folclóricas Africanas</a></li>
+      <li><a href="documentos/investimentos_bodiva.pdf" target="_blank">Ebook: Investir na BODIVA – Guia para Iniciantes</a></li>
+      <li><a href="documentos/por_que_ricos_ficam_mais_ricos.pdf" target="_blank">Artigo: Por que os ricos ficam mais ricos?</a></li>
+    </ul>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <form onsubmit="event.preventDefault(); alert('Obrigado pelo contato!');">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="nome" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-      <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    <form action="mailto:teu-email@email.com" method="post" enctype="text/plain">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
       <button type="submit">Enviar</button>
     </form>
   </section>
 
-</div>
-
-<button id="topBtn" title="Voltar ao topo">Topo</button>
-
-<script>
-  // Mostrar botão voltar ao topo
-  window.onscroll = function() {
-    const topBtn = document.getElementById('topBtn');
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  };
-
-  // Função para voltar ao topo
-  document.getElementById('topBtn').addEventListener('click', () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  });
-</script>
+  <footer>
+    <p>&copy; 2025 Dala De Carvalho. Todos os direitos reservados.</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/dala" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.researchgate.net/profile/dala" target="_blank">ResearchGate</a></li>
+      <li><a href="https://facebook.com/share/r/169Btpn3iv/" target="_blank">Facebook</a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>
