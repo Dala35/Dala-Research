@@ -1,148 +1,239 @@
-<!DOCTYPE html><html lang="pt">
-<head>/* Importa fonte moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #d51015; /* Vermelho bandeira Angola */
-  color: white;
-  padding: 20px 30px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 2.2rem;
-}
-
-header p.subtitle {
-  margin: 5px 0 0;
-  font-weight: 400;
-  font-size: 1.1rem;
-  font-style: italic;
-  opacity: 0.85;
-}
-
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-section {
-  background-color: white;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  color: #d51015;
-  margin-top: 0;
-  font-weight: 600;
-  border-bottom: 2px solid #d51015;
-  padding-bottom: 6px;
-}
-
-a, a:visited {
-  color: #d5a10d; /* Amarelo bandeira Angola */
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-a:hover, a:focus {
-  color: #f7de3a;
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.7rem;
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dala De Carvalho - Pesquisa Científica</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset e base */
+  * {
+    box-sizing: border-box;
   }
-  main {
-    margin: 15px;
-    padding: 0 10px;
+  body {
+    margin: 0; font-family: 'Inter', sans-serif;
+    background: #f5f5f5; color: #222;
+    line-height: 1.6;
   }
+  a {
+    color: #e6b422; /* amarelo bandeira */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Navbar fixa */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #000; /* preto bandeira */
+    color: #e6b422;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    z-index: 999;
+    font-weight: 700;
+  }
+  nav a {
+    color: #e6b422;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+
+  /* Container geral */
+  .container {
+    max-width: 900px;
+    margin: 100px auto 40px; /* topo para navbar */
+    padding: 0 1rem;
+  }
+
+  /* Seções */
   section {
-    padding: 15px 15px;
+    margin-bottom: 4rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
   }
-}<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dala Research – Inovação em Saúde</title>
-  <link rel="stylesheet" href="styles.css">
+
+  /* Títulos */
+  h1, h2 {
+    color: #b22222; /* vermelho bandeira */
+    margin-bottom: 1rem;
+  }
+
+  /* Biografia */
+  .bio {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .bio img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #b22222;
+  }
+  .bio p {
+    flex: 1;
+  }
+
+  /* Projetos / artigos */
+  .project, .article {
+    margin-bottom: 1.5rem;
+  }
+  .project-title, .article-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #b22222;
+  }
+  .project-desc, .article-desc {
+    margin: 0.3rem 0 0 0;
+  }
+
+  /* Formulário contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  label {
+    font-weight: 600;
+  }
+  input, textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  button {
+    background-color: #b22222;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #7a1414;
+  }
+
+  /* Botão voltar ao topo */
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .bio {
+      flex-direction: column;
+      text-align: center;
+    }
+    .bio img {
+      margin: 0 auto;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Dala De Carvalho – Pesquisador Independente em Inovação em Saúde</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#biografia">Biografia</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#publicacoes">Publicações</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>  <main>
-    <section id="inicio">
-      <h2>Bem-vindo à Dala Research</h2>
-      <p>Pesquisas inovadoras e propostas terapêuticas promissoras com impacto global.</p>
-    </section><section id="biografia">
-  <h2>Biografia</h2>
-  <p>Dala De Carvalho é cantor, compositor, educador e pesquisador angolano. Atua de forma independente com propostas interdisciplinares na área da saúde e cultura, com foco em soluções terapêuticas disruptivas.</p>
-</section>
 
-<section id="projetos">
-  <h2>Projetos de Pesquisa</h2>
-  <ul>
-    <li>
-      <h3>Proposta de Cura do HIV</h3>
-      <p>Engenharia Terapêutica Multicomponente: combinação de bNAbs, CRISPR/Cas9, LRAs, mRNA e estratégias vacinais para erradicação viral.</p>
-    </li>
-    <li>
-      <h3>Modelo de Remissão da Diabetes</h3>
-      <p>Protocolo experimental de reversão da diabetes tipo 2 com suporte molecular e alimentar, com aplicação acessível em comunidades.</p>
-    </li>
-  </ul>
-</section>
+<nav>
+  <a href="#biografia">Biografia</a>
+  <a href="#pesquisa">Pesquisa</a>
+  <a href="#publicacoes">Publicações</a>
+  <a href="#contato">Contato</a>
+</nav>
 
-<section id="publicacoes">
-  <h2>Publicações</h2>
-  <ul>
-    <li><a href="docs/proposta_cura_HIV_Dala.pdf" target="_blank">PDF – Proposta de Cura do HIV</a></li>
-    <li><a href="docs/remissao_diabetes_modelo_Dala.pdf" target="_blank">PDF – Modelo Experimental de Remissão da Diabetes</a></li>
-  </ul>
-</section>
+<div class="container">
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Email: daladecarvalho@pesquisa.org</p>
-  <p>GitHub: <a href="https://github.com/dala35" target="_blank">@dala35</a></p>
-</section>
+  <section id="biografia">
+    <h1>Dala De Carvalho</h1>
+    <div class="bio">
+      <img src="https://via.placeholder.com/140" alt="Foto de Dala De Carvalho" />
+      <p>Pesquisador independente especializado em música tradicional angolana, com atuação em educação musical e pesquisa aplicada. Diretor pedagógico do Instituto Politécnico de Artes.</p>
+    </div>
+  </section>
 
-  </main>  <footer>
-    <p>&copy; 2025 Dala De Carvalho. Todos os direitos reservados.</p>
-  </footer>
+  <section id="pesquisa">
+    <h2>Pesquisa</h2>
+    <div class="project">
+      <div class="project-title">Engenharia Terapêutica Multicomponente para HIV</div>
+      <div class="project-desc">Proposta inovadora combinando bNAbs, ART e CRISPR/Cas9 para um tratamento potencialmente curativo.</div>
+    </div>
+    <div class="project">
+      <div class="project-title">Vacinas mRNA e Ativadores de Replicação Viral</div>
+      <div class="project-desc">Abordagem experimental visando a ativação controlada do vírus para eliminação do reservatório latente.</div>
+    </div>
+    <!-- Adicione mais projetos conforme desejar -->
+  </section>
+
+  <section id="publicacoes">
+    <h2>Publicações</h2>
+    <div class="article">
+      <div class="article-title">Proposta Científica para Cura do HIV - Documento 1</div>
+      <div class="article-desc"><a href="#" target="_blank">Download PDF</a></div>
+    </div>
+    <div class="article">
+      <div class="article-title">Proposta Científica para Cura do HIV - Documento 2</div>
+      <div class="article-desc"><a href="#" target="_blank">Download PDF</a></div>
+    </div>
+    <!-- Substitua os links para os seus arquivos -->
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form onsubmit="event.preventDefault(); alert('Obrigado pelo contato!');">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</div>
+
+<button id="topBtn" title="Voltar ao topo">Topo</button>
+
+<script>
+  // Mostrar botão voltar ao topo
+  window.onscroll = function() {
+    const topBtn = document.getElementById('topBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  // Função para voltar ao topo
+  document.getElementById('topBtn').addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+</script>
+
 </body>
 </html>
