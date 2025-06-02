@@ -1,246 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dala Research | Dala De Carvalho</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dala De Carvalho – Investigador Independente</title>
   <style>
-    :root {
-      --cor-primaria: #d72638;
-      --cor-secundaria: #1b1b1b;
-      --cor-clara: #f9f9f9;
-      --cor-texto: #222;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: var(--cor-clara);
-      color: var(--cor-texto);
+      background-color: #f4f4f4;
+      color: #333;
     }
-
     header {
-      background-color: var(--cor-secundaria);
+      background-color: #002c4c;
       color: white;
+      padding: 1.5rem;
       text-align: center;
-      padding: 2rem 1rem;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 0.5rem 0;
-      font-style: italic;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0.5rem 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     section {
-      padding: 2rem 1rem;
       max-width: 900px;
       margin: auto;
-    }
-
-    section h2 {
-      color: var(--cor-primaria);
-      margin-bottom: 1rem;
-    }
-
-    article {
+      padding: 2rem;
       background-color: white;
-      border-left: 5px solid var(--cor-primaria);
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 1.5rem;
     }
-
-    article h3 {
+    h1, h2 {
       margin-top: 0;
     }
-
-    a {
-      color: var(--cor-primaria);
+    .project {
+      margin-bottom: 2rem;
+      overflow: auto;
     }
-
-    a:hover {
-      text-decoration: underline;
+    .logo {
+      width: 100px;
+      float: right;
+      margin-left: 1rem;
     }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-
-    form {
-      background: white;
-      padding: 1rem;
-      border-left: 5px solid var(--cor-primaria);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    form label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    form button {
-      margin-top: 1rem;
-      background: var(--cor-primaria);
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #b81e2f;
-    }
-
     footer {
-      background-color: var(--cor-secundaria);
-      color: white;
       text-align: center;
       padding: 1rem;
+      background-color: #002c4c;
+      color: white;
+      margin-top: 2rem;
     }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 0.5rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    a {
+      color: #002c4c;
+      text-decoration: none;
     }
-
-    footer li {
-      margin: 0 1rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-      }
-
-      nav li {
-        margin: 0.3rem 0;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Dala De Carvalho</h1>
-    <p>Pesquisador Independente em Música Tradicional Angolana</p>
-    <nav>
-      <ul>
-        <li><a href="#biografia">Biografia</a></li>
-        <li><a href="#pesquisa">Pesquisa</a></li>
-        <li><a href="#publicacoes">Publicações</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <p>Investigador Independente – Inovação em Saúde Translacional</p>
   </header>
 
-  <section id="biografia">
-    <h2>Biografia</h2>
-    <img src="sua-foto.jpg" alt="Foto de Dala De Carvalho" width="200">
-    <p>Dala De Carvalho é cantor, compositor, educador e pesquisador musical especializado em música tradicional angolana. Atua de forma independente desenvolvendo projetos com impacto sociocultural e científico, focando na preservação, inovação e internacionalização das sonoridades africanas, com destaque para o folclore e a linguagem rítmica de Angola.</p>
+  <section>
+    <h2>Sobre o Pesquisador</h2>
+    <p>Dala De Carvalho é investigador independente com experiência multidisciplinar em música, educação e ciência. Atua na interseção entre arte, cognição e inovação biomédica, desenvolvendo propostas com apoio de inteligência artificial para abordar desafios globais de saúde.</p>
   </section>
 
-  <section id="pesquisa">
-    <h2>Projetos de Pesquisa</h2>
-    <article>
-      <h3>Engenharia Terapêutica Multicomponente aplicada ao HIV</h3>
-      <p>Proposta científica que explora modelos biointeligentes combinando terapia multidimensional, formulação local e princípios de neuroengenharia. O projeto visa contribuir para uma potencial cura funcional do HIV.</p>
-      <a href="documentos/proposta_terapeutica.pdf" target="_blank">Ver PDF</a>
-    </article>
-    <article>
-      <h3>Classificação de Estilos Musicais Angolanos com IA</h3>
-      <p>Uso de inteligência artificial para classificar estilos como Semba, Kilapanga e Afro Soul com base em BPM e intensidade percussiva. Projeto visa aplicar tecnologia à salvaguarda do patrimônio sonoro angolano.</p>
-      <a href="documentos/classificacao_musical_ia.pdf" target="_blank">Ver PDF</a>
-    </article>
+  <section>
+    <h2>Projetos Científicos</h2>
+
+    <div class="project">
+      <img src="https://drive.google.com/uc?export=view&id=1eQzMlu_Y9WcRlcTB11hSia3XKkqxGLEB" alt="GEN-µCODE logo" class="logo" />
+      <h3>GEN-µCODE</h3>
+      <p>Terapia regenerativa baseada em CRISPR-Cas13d, células iPSC e microbiota simbiótica para restaurar função insulínica.</p>
+    </div>
+
+    <div class="project">
+      <img src="https://drive.google.com/uc?export=view&id=1eOhycaVPYcJhg8h2LlhRHKUVqVzBSV_q" alt="NEURO-META RESET logo" class="logo" />
+      <h3>NEURO-META RESET</h3>
+      <p>Reprogramação hipotalâmica utilizando neuromodulação, jejum terapêutico e inteligência artificial para restaurar o eixo metabólico central.</p>
+    </div>
+
+    <div class="project">
+      <h3>VAX-INBETA</h3>
+      <p>Vacina terapêutica baseada em mRNA e antígenos ZnT8 com suporte de células T reguladoras para tolerância autoimune e regeneração beta.</p>
+    </div>
+
+    <div class="project">
+      <h3>SYMBIO-DEX</h3>
+      <p>Microbiota simbiótica adaptada e sensor IA para controle glicêmico em tempo real via comunicação intestinal-cerebral.</p>
+    </div>
+
+    <div class="project">
+      <h3>PANCREATIX</h3>
+      <p>Implante regenerativo bioimpresso em 3D com colágeno e células beta-like, encapsulado para função pancreática duradoura.</p>
+    </div>
+
   </section>
 
-  <section id="publicacoes">
-    <h2>Publicações</h2>
+  <section>
+    <h2>Artigos Científicos</h2>
     <ul>
-      <li><a href="documentos/ebook_dancas_folcloricas.pdf" target="_blank">Ebook: Danças Folclóricas Africanas</a></li>
-      <li><a href="documentos/investimentos_bodiva.pdf" target="_blank">Ebook: Investir na BODIVA – Guia para Iniciantes</a></li>
-      <li><a href="documentos/por_que_ricos_ficam_mais_ricos.pdf" target="_blank">Artigo: Por que os ricos ficam mais ricos?</a></li>
+      <li><a href="#">Propostas Inovadoras para Remissão Funcional da Diabetes (PT)</a></li>
+      <li><a href="#">Innovative Proposals for Functional Diabetes Remission (EN)</a></li>
     </ul>
   </section>
 
-  <section id="contato">
+  <section>
     <h2>Contato</h2>
-    <form action="mailto:teu-email@email.com" method="post" enctype="text/plain">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
+    <p>📧 <a href="mailto:dalla.decarvalho@gmail.com">dalla.decarvalho@gmail.com</a></p>
+    <p>🌍 Angola</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dala De Carvalho. Todos os direitos reservados.</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/dala" target="_blank">LinkedIn</a></li>
-      <li><a href="https://www.researchgate.net/profile/dala" target="_blank">ResearchGate</a></li>
-      <li><a href="https://facebook.com/share/r/169Btpn3iv/" target="_blank">Facebook</a></li>
-    </ul>
+    &copy; 2025 Dala De Carvalho – Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
